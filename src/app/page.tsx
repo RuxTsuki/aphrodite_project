@@ -1,3 +1,4 @@
+import { ToggleTheme } from '@/ui/atoms'
 import Image from 'next/image'
 
 export default function Home() {
@@ -16,14 +17,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+            <ToggleTheme />
           </a>
         </div>
       </div>

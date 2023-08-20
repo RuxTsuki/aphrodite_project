@@ -19,7 +19,7 @@
   --bg-color-btn-outlined: #000;
 
   --color-icons: #000;
-
+  --primary-color: #c98bef;
 }
 
 [data-theme="light"] {
@@ -34,6 +34,8 @@
   --bg-color-btn-outlined: #000;
 
   --color-icons: #000;
+  --bg-color: #fff;
+  --svg-theme: url(../assets/svg/theme/sun.svg);
 }
 
 [data-theme="dark"] {
@@ -48,6 +50,8 @@
   --bg-color-btn-outlined: #fff;
 
   --color-icons: #fff;
+  --bg-color: #000;
+  --svg-theme: url(../assets/svg/theme/moon.svg);
 }
 
 @media (prefers-color-scheme: dark) {

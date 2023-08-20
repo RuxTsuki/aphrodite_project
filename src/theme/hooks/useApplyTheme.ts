@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect } from 'react';
 import { AttrThemeName, Themes } from '../theme.types';
 import { useListenPrefersChange } from './useListenPrefersChange';
