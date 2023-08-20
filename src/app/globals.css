@@ -6,6 +6,48 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+
+  --color-title: #000;
+  --color-subtitle: #000;
+  --color-paragraph: #565656;
+
+  --color-item-menu: #7A7A7A;
+
+  --color-btn: #000;
+  --bg-color-btn-filled: #000;
+  --bg-color-btn-outlined: #000;
+
+  --color-icons: #000;
+
+}
+
+[data-theme="light"] {
+  --color-title: #000;
+  --color-subtitle: #000;
+  --color-paragraph: #565656;
+
+  --color-item-menu: #7A7A7A;
+
+  --color-btn: #000;
+  --bg-color-btn-filled: #000;
+  --bg-color-btn-outlined: #000;
+
+  --color-icons: #000;
+}
+
+[data-theme="dark"] {
+  --color-title: #fff;
+  --color-subtitle: #fff;
+  --color-paragraph: #fff;
+
+  --color-item-menu: #fff;
+
+  --color-btn: #000;
+  --bg-color-btn-filled: #fff;
+  --bg-color-btn-outlined: #fff;
+
+  --color-icons: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,10 +60,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
