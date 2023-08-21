@@ -1,3 +1,18 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "@typescript-eslint/ban-types": ["error",
+    {
+        "types": {
+            "String": false,
+            "Boolean": false,
+            "Number": false,
+            "Symbol": false,
+            "{}": false,
+            "Object": false,
+            "object": false,
+            "Function": false,
+        },
+        "extendDefaults": true
+    }
+]
 }
