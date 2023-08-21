@@ -2,11 +2,14 @@
 
 const pwa = require('next-pwa')({
     dest: 'public',
-    sw: ""
+    register: true,
+    sw: "sw.js"
 })
 
 const nextConfig = {
-    ...pwa
+
 }
 
-module.exports = nextConfig
+module.exports = pwa({
+    ...nextConfig
+})
