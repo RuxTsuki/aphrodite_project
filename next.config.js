@@ -3,7 +3,7 @@
 const pwa = require('next-pwa')({
     dest: 'public',
     register: true,
-    sw: "sw.js"
+    sw: "/sw.js"
 })
 
 const nextConfig = {
