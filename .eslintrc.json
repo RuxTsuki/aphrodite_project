@@ -10,7 +10,7 @@
             "{}": false,
             "Object": false,
             "object": false,
-            "Function": false,
+            "Function": false
         },
         "extendDefaults": true
     }
