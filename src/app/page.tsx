@@ -1,4 +1,4 @@
-import { ToggleTheme } from '@/ui/atoms'
+import { ToggleTheme } from '@/ui/atoms';
 import Image from 'next/image'
 
 export default function Home() {
