@@ -1,10 +1,9 @@
 import { StateProvider } from '@/store/provider';
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/theme/Provider';
-
-const inter = Inter({ subsets: ['latin'] });
+import { SplashScreen } from '@/ui/atoms';
+import { outfit, playball } from './fonts';
 
 export const metadata: Metadata = {
   title: 'Aphrodite Project',
@@ -21,9 +20,10 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${outfit.variable} ${playball.variable}`}>
         <StateProvider>
           <ThemeProvider>
+            {/* <SplashScreen /> */}
             {children}
           </ThemeProvider>
         </StateProvider>
