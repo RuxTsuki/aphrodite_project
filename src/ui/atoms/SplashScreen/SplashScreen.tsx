@@ -12,7 +12,7 @@ export const SplashScreen = () => {
             setTimeout(() => {
                 setIsFinishSplash(true);
                 removeOverflowInBody();
-            }, 700);
+            }, 800);
 
         }
         animate();
