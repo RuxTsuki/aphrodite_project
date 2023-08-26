@@ -23,6 +23,9 @@ dependencies:
   '@types/react-redux':
     specifier: ^7.1.25
     version: 7.1.25
+  animejs:
+    specifier: ^3.2.1
+    version: 3.2.1
   autoprefixer:
     specifier: 10.4.15
     version: 10.4.15(postcss@8.4.27)
@@ -61,6 +64,9 @@ dependencies:
     version: 7.0.0
 
 devDependencies:
+  '@types/animejs':
+    specifier: ^3.1.7
+    version: 3.1.7
   '@types/next-pwa':
     specifier: ^5.6.4
     version: 5.6.4(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)
@@ -1443,6 +1449,10 @@ packages:
     dependencies:
       tslib: 2.6.1
 
+  /@types/animejs@3.1.7:
+    resolution: {integrity: sha512-kFSyjM+fLo3oE9noWEtUvF82ttN8fTrKohiEMIrSzEzEjnsCmtO0rBCUQBlSPEb2w8vfN+v4/Zo0tK21Bgmq4g==}
+    dev: true
+
   /@types/eslint-scope@3.7.4:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
@@ -1772,6 +1782,10 @@ packages:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
       uri-js: 4.4.1
+
+  /animejs@3.2.1:
+    resolution: {integrity: sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==}
+    dev: false
 
   /ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}

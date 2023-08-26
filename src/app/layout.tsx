@@ -1,10 +1,9 @@
 import { StateProvider } from '@/store/provider';
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/theme/Provider';
+import { outfit, playball } from './fonts';
 
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Aphrodite Project',
@@ -14,15 +13,15 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) {
 
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <StateProvider>
+      <body className={`${outfit.variable} ${playball.variable} overflow-hidden`}>
+        <StateProvider >
           <ThemeProvider>
             {children}
           </ThemeProvider>
