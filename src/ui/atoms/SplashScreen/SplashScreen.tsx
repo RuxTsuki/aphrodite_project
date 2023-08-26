@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from 'react';
-import { removeBgColorInBody, removeOverflowInBody } from '@/utils/util';
+import { removeOverflowInBody } from '@/utils/util';
 
 
 export const SplashScreen = () => {
@@ -11,9 +11,8 @@ export const SplashScreen = () => {
         const animate = () => {
             setTimeout(() => {
                 setIsFinishSplash(true);
-                removeBgColorInBody();
                 removeOverflowInBody();
-            }, 650);
+            }, 700);
 
         }
         animate();
