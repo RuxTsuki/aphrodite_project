@@ -2,8 +2,8 @@ import { StateProvider } from '@/store/provider';
 import './globals.css';
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/theme/Provider';
-import { SplashScreen } from '@/ui/atoms';
 import { outfit, playball } from './fonts';
+
 
 export const metadata: Metadata = {
   title: 'Aphrodite Project',
@@ -13,17 +13,16 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) {
 
   return (
     <html lang="en">
-      <body className={`${outfit.variable} ${playball.variable}`}>
-        <StateProvider>
+      <body className={`${outfit.variable} ${playball.variable} overflow-hidden`}>
+        <StateProvider >
           <ThemeProvider>
-            {/* <SplashScreen /> */}
             {children}
           </ThemeProvider>
         </StateProvider>

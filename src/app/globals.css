@@ -20,6 +20,8 @@
 
   --color-icons: #000;
   --primary-color: #c98bef;
+
+  --bg-color: #fff;
 }
 
 [data-theme="light"] {
@@ -76,7 +78,32 @@ body {
 
 .aphrodite-logo {
   font-family: var(--font-playball), system-ui, -apple-system, sans-serif;
-  color: var(--color-title);
-  font-size: 1.5rem;
+  color: #fff;
+  font-size: 2.125rem;
   font-weight: 400;
+  animation: identifier1 700ms ease-in-out;
+}
+
+@keyframes identifier1 {
+  0% {
+    opacity: 0;
+    scale: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .aphrodite-logo {
+    font-size: 3.25rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .aphrodite-logo {
+    font-size: 4.5rem;
+  }
 }
