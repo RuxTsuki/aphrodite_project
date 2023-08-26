@@ -13,7 +13,7 @@ export const SplashScreen = () => {
                 setIsFinishSplash(true);
                 removeBgColorInBody();
                 removeOverflowInBody();
-            }, 500);
+            }, 650);
 
         }
         animate();
