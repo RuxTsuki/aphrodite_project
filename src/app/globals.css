@@ -24,7 +24,7 @@
   --bg-color: #fff;
 }
 
-[data-theme="light"] {
+.light {
   --color-title: #000;
   --color-subtitle: #000;
   --color-paragraph: #565656;
@@ -40,7 +40,7 @@
   --svg-theme: url(../assets/svg/theme/sun.svg);
 }
 
-[data-theme="dark"] {
+.dark {
   --color-title: #fff;
   --color-subtitle: #fff;
   --color-paragraph: #fff;

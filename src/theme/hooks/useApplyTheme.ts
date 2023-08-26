@@ -1,7 +1,7 @@
 "use client"
 
-import { useEffect } from 'react';
-import { AttrThemeName, Themes } from '../theme.types';
+import { useEffect, useLayoutEffect } from 'react';
+import { Themes } from '../theme.types';
 import { useListenPrefersChange } from './useListenPrefersChange';
 
 type Props = {
@@ -22,7 +22,9 @@ export const useApplyTheme = ({ initialTheme = Themes.dark, theme = Themes.dark,
 
     useEffect(() => {
         const newTheme = theme === Themes.dark ? Themes.dark : Themes.light;
-        document.documentElement.setAttribute(AttrThemeName, newTheme);
+        document.documentElement.classList.remove(`${Themes.dark}`);
+        document.documentElement.classList.remove(`${Themes.light}`);
+        document.documentElement.classList.add(newTheme);
     }, [theme]);
 
     return theme;
