@@ -1,13 +1,12 @@
 "use client"
 
-import { ReactNode, useCallback, useState } from "react"
+import { ReactNode, useCallback } from "react"
 import { useGetInitialTheme } from "./hooks/useGetInitialTheme";
 import { Themes } from "./theme.types";
 import { useApplyTheme } from "./hooks/useApplyTheme";
-import { useChangeTheme } from "./hooks/useChangeTheme";
 import { useAppDispatch, useAppSelector } from "@/hooks/state/useStateTypes";
 import { changeThemeA } from "@/store/reducers/theme/themeSlice";
-
+import { NextUIProvider } from '@nextui-org/react'
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const initialTheme = useGetInitialTheme();
@@ -23,7 +22,9 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
     return (
         <>
-            {children}
+            <NextUIProvider>
+                {children}
+            </NextUIProvider>
         </>
     )
 }
