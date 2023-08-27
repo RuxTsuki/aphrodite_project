@@ -1,0 +1,31 @@
+.container-tour {
+    grid-template-rows: auto 100px;
+}
+
+.container-tour>div>ul>li {
+    grid-template-rows: auto 150px;
+    height: 100%;
+}
+
+.container-tour>div>ul>li h3 {
+    font-size: clamp(2.125rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 42px;
+    color: #2f2f33;
+    padding-top: 10px;
+}
+
+.container-tour>div>ul>li p {
+    font-size: clamp(1.25rem, 3.2vw, 2.3rem);
+    font-weight: 400;
+    color: #515153;
+    margin-top: 1rem;
+}
+
+.container-stepline-info {
+    backdrop-filter: blur(11px) saturate(123%);
+    -webkit-backdrop-filter: blur(11px) saturate(123%);
+    background-color: rgb(248 250 252 / 49%);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}

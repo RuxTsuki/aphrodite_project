@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from 'react';
-import { removeOverflowInBody } from '@/utils/util';
+import { getValueFromStorage, removeOverflowInBody } from '@/utils/util';
+import { viewTourLocalS } from '@/utils/constant';
 
 
 export const SplashScreen = () => {
@@ -11,7 +12,10 @@ export const SplashScreen = () => {
         const animate = () => {
             setTimeout(() => {
                 setIsFinishSplash(true);
-                removeOverflowInBody();
+                const { value: tourViewed } = getValueFromStorage(viewTourLocalS);
+
+                if (tourViewed === 'true')
+                    removeOverflowInBody();
             }, 800);
 
         }
@@ -21,7 +25,7 @@ export const SplashScreen = () => {
 
     return (
         <>
-            <div className={`w-full h-screen absolute z-[100] bg-[#000] ${isFinishSplash ? 'hidden' : ''}`} >
+            <div className={`w-full h-screen fixed top-0 left-0 bottom-0 right-0 z-[100] bg-[#000] ${isFinishSplash ? 'hidden' : ''}`} >
                 <div className='w-full h-screen grid place-items-center'>
                     <p className='aphrodite-logo'>Aphrodite</p>
                 </div>
