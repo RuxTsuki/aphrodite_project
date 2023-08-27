@@ -1,10 +1,12 @@
 import { SplashScreen, ToggleTheme } from '@/ui/atoms';
 import { Prueba } from '@/ui/atoms';
+import { Tour } from '@/ui/molecules';
 
 export default function Home() {
   return (
     <>
       <SplashScreen />
+      <Tour />
 
       <main className="flex h-[1500px] flex-col items-center justify-between p-24">
 

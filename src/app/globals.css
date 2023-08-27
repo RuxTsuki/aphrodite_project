@@ -22,6 +22,31 @@
   --primary-color: #c98bef;
 
   --bg-color: #fff;
+
+  /* font sizes Desktop*/
+  --font-s-big-title-d: 5.125rem;
+  --font-s-text-d: 1.25rem;
+  --font-s-buttons-d: 1.5rem;
+  --font-s-title-d: 3rem;
+  --font-s-subtitle-d: 1.75rem;
+  --font-s-footer-d: 1rem;
+  --font-s-input-d: 1.5rem;
+
+  /* font sizes Mobile*/
+  --font-s-big-title: 2.5rem;
+  --font-s-title: 2rem;
+  --font-s-text: 0.875rem;
+  --font-s-subtitle: 1.25rem;
+  --font-s-footer: 1rem;
+  --font-s-buttons: 1.125rem;
+  --font-s-input: 1rem;
+
+  /* fonts weight */
+  --font-w-big-title: 900;
+  --font-w-text: 500;
+  --font-w-title: 900;
+  --font-w-subtitle: 900;
+  --font-w-footer: 400;
 }
 
 .light {
@@ -82,6 +107,20 @@ body {
   font-size: 2.125rem;
   font-weight: 400;
   animation: identifier1 700ms ease-in-out;
+}
+
+.title {
+  font-size: clamp(var(--font-s-title), 1.7vw, var(--font-s-title-d));
+  font-weight: var(--font-w-title);
+}
+
+.subtitle {
+  font-size: clamp(var(--font-s-subtitle), 1.7vw, var(--font-s-subtitle-d));
+  font-weight: var(--font-w-title);
+}
+
+.paragraph {
+  font-size: clamp(1rem, 1vw, 1.125rem);
 }
 
 @keyframes identifier1 {
