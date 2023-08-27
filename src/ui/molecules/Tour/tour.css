@@ -1,5 +1,5 @@
 .container-tour {
-    grid-template-rows: auto 100px;
+    grid-template-rows: auto 112px;
 }
 
 .container-tour>div>ul>li {
