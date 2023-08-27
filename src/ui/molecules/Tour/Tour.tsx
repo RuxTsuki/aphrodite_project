@@ -66,9 +66,11 @@ export const Tour = () => {
             </div>
 
 
-            <div className="flex self-center justify-between px-6">
-                <StepLine stepQuantity={slideData.length} currentStep={step} />
-                <Button onClick={() => nextSlide()}>Next</Button>
+            <div className="block px-6">
+                <div className='flex align-center justify-between'>
+                    <StepLine stepQuantity={slideData.length} currentStep={step} />
+                    <Button onClick={() => nextSlide()}>Next</Button>
+                </div>
             </div>
         </div>
     )
