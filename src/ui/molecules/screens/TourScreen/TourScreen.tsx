@@ -9,7 +9,7 @@ import Tour1 from '@/assets/imgs/tour1.webp';
 import { StepLine } from '@/ui/atoms/StepLine';
 import { useTourViewed } from '@/hooks/tour/useTourViewed';
 
-export const Tour = () => {
+export const TourScreen = () => {
     const [step, setStep] = useState(0);
     const { tourViewed, finishTour } = useTourViewed();
 
