@@ -8,6 +8,8 @@ import Tour0 from '@/assets/imgs/tour0.webp';
 import Tour1 from '@/assets/imgs/tour1.webp';
 import { StepLine } from '@/ui/atoms/StepLine';
 import { useTourViewed } from '@/hooks/tour/useTourViewed';
+import anime from 'animejs';
+import 'animate.css';
 
 export const TourScreen = () => {
     const [step, setStep] = useState(0);
@@ -32,14 +34,29 @@ export const TourScreen = () => {
 
     const nextSlide = () => {
         setStep(step === slideData.length - 1 ? 0 : step + 1);
+        animation();
 
-        if (step === slideData.length - 1) {
+        /* if (step === slideData.length - 1) {
             finishTour();
-        }
+        } */
     }
 
     const prevSlide = () => {
         setStep(step === 0 ? slideData.length - 1 : step - 1);
+    }
+
+    const animation = () => {
+        const loader = anime.timeline({
+            complete: () => {
+
+            }
+        })
+
+        /*         loader.add({
+                    targets: '.tour-slide',
+                    translateX: [0, -250],
+                    easing: 'easeInOutQuad',
+                }) */
     }
 
     return (
@@ -48,15 +65,17 @@ export const TourScreen = () => {
                 <ul className='h-full'>
                     {
                         slideData.map((slide, index) => (
-                            <li key={slide.id} className={step === index ? 'active relative grid' : 'hidden'}>
-                                <div className="w-full h-full">
-                                    <Image className="object-cover h-full" priority={true} src={slide.img} alt={`Beauty img tour ${index}`} />
-                                </div>
+                            <li key={slide.id} className={`grid ${step === index ? 'active animate__animated animate__fadeInRight' : 'hidden'}`}>
+                                <div className='tour-slide grid relative'>
+                                    <div className="w-full h-full">
+                                        <Image className="object-cover h-full" priority={true} src={slide.img} alt={`Beauty img tour ${index}`} />
+                                    </div>
 
-                                <div className='relative'>
-                                    <div className='container-stepline-info absolute grid place-items-start px-6 top-[-100px]'>
-                                        <h3>{slide.title}</h3>
-                                        <p>{slide.content}</p>
+                                    <div className='relative'>
+                                        <div className='container-stepline-info absolute grid place-items-start px-6 top-[-100px]'>
+                                            <h3>{slide.title}</h3>
+                                            <p>{slide.content}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
