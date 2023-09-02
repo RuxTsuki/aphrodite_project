@@ -36,9 +36,9 @@ export const TourScreen = () => {
         setStep(step === slideData.length - 1 ? 0 : step + 1);
         animation();
 
-        /* if (step === slideData.length - 1) {
+        if (step === slideData.length - 1) {
             finishTour();
-        } */
+        }
     }
 
     const prevSlide = () => {
