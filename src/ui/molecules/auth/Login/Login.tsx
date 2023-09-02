@@ -31,7 +31,7 @@ export const Login = () => {
                         </Button>
 
                         <p className="normal-text mt-[10px]">¿No tienes cuenta?
-                            <Link href="/auth/register">
+                            <Link href={'/auth/register'}>
                                 <span className='text-main underline pl-1'>Registrate</span>
                             </Link>
                         </p>
