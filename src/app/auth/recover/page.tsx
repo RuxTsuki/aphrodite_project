@@ -1,4 +1,4 @@
-import { Recover } from "@/ui/molecules/auth/recover";
+import { Recover } from "@/ui/molecules/auth";
 
 
 export default function PageRecover() {

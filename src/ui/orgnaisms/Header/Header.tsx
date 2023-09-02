@@ -10,7 +10,9 @@ export const Header = () => {
         <div className="relative h-[64px]">
             <nav className='fixed top-0 left-0 right-0 z-50 px-[18px] py-[14px] flex items-center justify-between'>
                 <div className="flex gap-[10px] items-center justify-center">
-                    <Menu className="general-icon-color" />
+                    <Button size="sm" variant="light">
+                        <Menu className="general-icon-color" />
+                    </Button>
 
                     <AphroditeLogo />
                 </div>
