@@ -1,40 +1,46 @@
 'use client'
 
-import { Button, Input } from '@nextui-org/react'
-import { useRouter } from "next/navigation"
+import { Button, Input } from '@nextui-org/react';
+import { useRouter } from "next/navigation";
+import { GoBackMenu } from '@/ui/molecules/GoBackMenu';
 
 export const Login = () => {
     const router = useRouter();
 
     const goToCreateAccount = () => {
-        router.replace('/auth/register');
+        router.push('/auth/register');
     }
 
     return (
-        <div className="container max-w-[700px] px-[50px] mt-[50px] mx-auto">
-            <h3 className='title'>Iniciar Sesión</h3>
+        <>
+            <GoBackMenu customRoute="/" />
 
-            <div className="mt-[50px]">
-                <form action="" className="flex flex-col gap-[10px] place-content-center">
-                    <Input size={'sm'} type="email" placeholder="Enter your email" />
-                    <Input size={'sm'} type="password" placeholder="Enter your Password" />
+            <div className="container max-w-[700px] px-[50px] mt-[50px] mx-auto">
+                <h3 className='title'>Iniciar Sesión</h3>
 
-                    <p className="normal-text mt-[5px]"> ¿Olvidaste tu
-                        <span className='text-main underline pl-1'>
-                            Contraseña?
-                        </span>
-                    </p>
+                <div className="mt-[50px]">
+                    <form action="" className="flex flex-col gap-[10px] place-content-center">
+                        <Input size={'sm'} type="email" placeholder="Enter your email" />
+                        <Input size={'sm'} type="password" placeholder="Enter your Password" />
 
-                    <Button color="primary" className="w-full mt-[10px] px-[20px] py-[8px] text-[12px] h-auto rounded">
-                        Iniciar Sesion
-                    </Button>
+                        <p className="normal-text mt-[5px]"> ¿Olvidaste tu
+                            <span className='text-main underline pl-1'>
+                                Contraseña?
+                            </span>
+                        </p>
 
-                    <p className="normal-text mt-[10px]">¿No tienes cuenta?
-                        <span onClick={() => goToCreateAccount()} className='text-main underline pl-1'>Registrate</span>
-                    </p>
+                        <Button color="primary" className="w-full mt-[10px] px-[20px] py-[8px] text-[12px] h-auto rounded">
+                            Iniciar Sesion
+                        </Button>
 
-                </form>
+                        <p className="normal-text mt-[10px]">¿No tienes cuenta?
+                            <span onClick={() => goToCreateAccount()} className='text-main underline pl-1'>Registrate</span>
+                        </p>
+
+                    </form>
+                </div>
             </div>
-        </div>
+        </>
+
     )
 }
