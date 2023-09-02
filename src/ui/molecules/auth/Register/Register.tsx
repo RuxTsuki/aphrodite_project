@@ -12,7 +12,7 @@ export const Register = () => {
     }
 
     return (
-        <div className="container max-w-[700px] px-[50px] mt-[50px]">
+        <div className="container max-w-[700px] px-[50px] mt-[50px] mx-auto">
             <h3 className='title'>Crear cuenta</h3>
 
             <div className="mt-[50px]">
