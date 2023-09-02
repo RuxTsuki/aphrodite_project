@@ -54,7 +54,7 @@ export const TourScreen = () => {
 
         /*         loader.add({
                     targets: '.tour-slide',
-                    translateX: [0, -250],
+                    translateX: [0, '-100%'],
                     easing: 'easeInOutQuad',
                 }) */
     }
@@ -62,11 +62,11 @@ export const TourScreen = () => {
     return (
         <div className={`container-tour grid ${tourViewed ? 'hidden' : ''} fixed z-[50] w-full h-screen bg-slate-50`}>
             <div className="h-full">
-                <ul className='h-full'>
+                <ul className='h-full overflow-hidden flex'>
                     {
                         slideData.map((slide, index) => (
-                            <li key={slide.id} className={`grid ${step === index ? 'active animate__animated animate__fadeInRight' : 'hidden'}`}>
-                                <div className='tour-slide grid relative'>
+                            <li key={slide.id} className={`${step === index ? 'active grid' : 'hidden'} ${step === index && step > 0 ? 'tour-slide' : ''}`}>
+                                <div className='grid relative'>
                                     <div className="w-full h-full">
                                         <Image className="object-cover h-full" priority={true} src={slide.img} alt={`Beauty img tour ${index}`} />
                                     </div>
