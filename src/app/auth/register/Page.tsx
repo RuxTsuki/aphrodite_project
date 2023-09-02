@@ -1,4 +1,4 @@
-import { Register } from "@/ui/molecules/auth/Register/Register";
+import { Register } from "@/ui/molecules/auth/Register";
 
 
 export default function PageRegister() {
