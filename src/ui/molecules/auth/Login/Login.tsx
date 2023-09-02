@@ -1,15 +1,10 @@
 'use client'
 
 import { Button, Input } from '@nextui-org/react';
-import { useRouter } from "next/navigation";
 import { GoBackMenu } from '@/ui/molecules/GoBackMenu';
+import Link from 'next/link';
 
 export const Login = () => {
-    const router = useRouter();
-
-    const goToCreateAccount = () => {
-        router.push('/auth/register');
-    }
 
     return (
         <>
@@ -24,9 +19,11 @@ export const Login = () => {
                         <Input size={'sm'} type="password" placeholder="Enter your Password" />
 
                         <p className="normal-text mt-[5px]"> ¿Olvidaste tu
-                            <span className='text-main underline pl-1'>
-                                Contraseña?
-                            </span>
+                            <Link href={'/auth/recover'}>
+                                <span className='text-main underline pl-1'>
+                                    Contraseña?
+                                </span>
+                            </Link>
                         </p>
 
                         <Button color="primary" className="w-full mt-[10px] px-[20px] py-[8px] text-[12px] h-auto rounded">
@@ -34,7 +31,9 @@ export const Login = () => {
                         </Button>
 
                         <p className="normal-text mt-[10px]">¿No tienes cuenta?
-                            <span onClick={() => goToCreateAccount()} className='text-main underline pl-1'>Registrate</span>
+                            <Link href="/auth/register">
+                                <span className='text-main underline pl-1'>Registrate</span>
+                            </Link>
                         </p>
 
                     </form>

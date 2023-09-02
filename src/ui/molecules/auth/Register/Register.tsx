@@ -2,7 +2,7 @@
 
 import { Button, Input } from "@nextui-org/react"
 import { useRouter } from "next/navigation"
-import { GoBackMenu } from "../..";
+import { GoBackMenu } from "@/ui/molecules/GoBackMenu";
 
 export const Register = () => {
 
