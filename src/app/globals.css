@@ -34,20 +34,37 @@
 
   /* font sizes Mobile*/
   --font-s-big-title: 2.5rem;
-  --font-s-title: 2rem;
-  --font-s-text: 0.875rem;
-  --font-s-subtitle: 1.25rem;
+  --font-s-title: 1.5rem;
+  --font-s-subtitle: 1rem;
+  --font-s-text: .75rem;
   --font-s-footer: 1rem;
-  --font-s-buttons: 1.125rem;
-  --font-s-input: 1rem;
+  --font-s-buttons: .75rem;
+  --font-s-input: .75rem;
 
   /* fonts weight */
-  --font-w-big-title: 900;
-  --font-w-text: 500;
-  --font-w-title: 900;
-  --font-w-subtitle: 900;
-  --font-w-footer: 400;
+  --font-w-big-title: 800;
+  --font-w-text: 400;
+  --font-w-title: 500;
+  --font-w-subtitle: 400;
+  --font-w-footer: 500;
+
+  --icon-size-common: 1.75rem;
 }
+
+@media screen and (min-width: 768px) {
+  :root {
+    --icon-size-common: 2.125rem;
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-outfit), system-ui, -apple-system, sans-serif;
+}
+
 
 .light {
   --color-title: #000;
@@ -60,7 +77,7 @@
   --bg-color-btn-filled: #000;
   --bg-color-btn-outlined: #000;
 
-  --color-icons: #000;
+  --color-icons: #1f1d1d;
   --bg-color: #fff;
   --svg-theme: url(../assets/svg/theme/sun.svg);
 }
@@ -72,55 +89,63 @@
 
   --color-item-menu: #fff;
 
-  --color-btn: #000;
+  --color-btn: #111010;
   --bg-color-btn-filled: #fff;
   --bg-color-btn-outlined: #fff;
 
   --color-icons: #fff;
-  --bg-color: #000;
+  --bg-color: #161515;
   --svg-theme: url(../assets/svg/theme/moon.svg);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font-outfit), system-ui, -apple-system, sans-serif;
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+.bg-color {
+  background-color: var(--bg-color);
 }
 
 .aphrodite-logo {
   font-family: var(--font-playball), system-ui, -apple-system, sans-serif;
-  color: #fff;
-  font-size: 2.125rem;
+  color: var(--color-title);
+  font-size: 1.5rem;
   font-weight: 400;
-  animation: identifier1 700ms ease-in-out;
+}
+
+.general-icon-color {
+  fill: var(--color-icons);
+  width: var(--icon-size-common);
+  height: var(--icon-size-common);
+}
+
+.general-icon-color path {
+  stroke: var(--color-icons);
 }
 
 .title {
   font-size: clamp(var(--font-s-title), 1.7vw, var(--font-s-title-d));
   font-weight: var(--font-w-title);
+  color: var(--color-title);
 }
 
 .subtitle {
   font-size: clamp(var(--font-s-subtitle), 1.7vw, var(--font-s-subtitle-d));
-  font-weight: var(--font-w-title);
+  font-weight: var(--font-w-subtitle);
+  color: var(--color-subtitle);
+}
+
+.normal-text {
+  font-size: clamp(var(--font-s-text), 1.7vw, var(--font-s-text-d));
+  font-weight: var(--font-w-text);
+  color: var(--color-paragraph);
 }
 
 .paragraph {
   font-size: clamp(1rem, 1vw, 1.125rem);
+}
+
+/* splash */
+.aphrodite-logo.splash {
+  color: #fff;
+  font-size: 2.125rem;
+  animation: identifier1 700ms ease-in-out;
 }
 
 @keyframes identifier1 {
@@ -136,13 +161,13 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .aphrodite-logo {
+  .aphrodite-logo.splash {
     font-size: 3.25rem;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .aphrodite-logo {
+  .aphrodite-logo.splash {
     font-size: 4.5rem;
   }
 }

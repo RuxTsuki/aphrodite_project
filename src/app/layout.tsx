@@ -19,8 +19,8 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en" className='light'>
-      <body className={`${outfit.variable} ${playball.variable} overflow-hidden`}>
+    <html lang="es" className='light'>
+      <body className={`${outfit.variable} ${playball.variable} bg-color overflow-hidden`}>
         <StateProvider >
           <ThemeProvider>
             {children}
