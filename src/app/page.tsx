@@ -1,22 +1,23 @@
 import { ToggleTheme, } from '@/ui/atoms';
 import { Prueba } from '@/ui/atoms';
 import { SplashScreen, TourScreen } from '@/ui/molecules';
+import { Header } from '@/ui/orgnaisms/Header';
 
 export default function Home() {
   return (
     <>
+      {/* SCREENS */}
       <SplashScreen />
       <TourScreen />
 
-      <main className="flex h-[1500px] flex-col items-center justify-between p-24">
+      <Header />
 
+      <div className='h-[200px]'>
 
+      </div>
+
+      <main className=" h-[1000px]">
         <ToggleTheme />
-
-
-        <Prueba />
-
-
       </main>
     </>
 
