@@ -26,7 +26,7 @@ export const Login = () => {
                             </Link>
                         </p>
 
-                        <Button color="primary" className="w-full mt-[10px] px-[20px] py-[8px] text-[12px] h-auto rounded">
+                        <Button color="primary" className="w-full mt-[10px] px-[20px] py-[8px] text-[--font-s-buttons] h-auto rounded">
                             Iniciar Sesion
                         </Button>
 
