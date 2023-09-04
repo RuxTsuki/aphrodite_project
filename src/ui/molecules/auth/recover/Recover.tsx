@@ -20,7 +20,7 @@ export const Recover = () => {
 
                         <Input className="mt-[10px]" size={'sm'} type="email" placeholder="Email" />
 
-                        <Button color="primary" className="w-full mt-[10px] px-[20px] py-[8px] text-[12px] h-auto rounded">
+                        <Button color="primary" className="w-full mt-[10px] px-[20px] py-[8px] text-[--font-s-buttons] h-auto rounded">
                             Enviar
                         </Button>
                     </form>

@@ -25,7 +25,7 @@ export const Register = () => {
                         <Input size={'sm'} type="email" placeholder="Email" />
                         <Input size={'sm'} type="password" placeholder="Contraseña" />
 
-                        <Button color="primary" className="w-full mt-[10px] px-[20px] py-[8px] text-[12px] h-auto rounded">
+                        <Button color="primary" className="w-full mt-[10px] px-[20px] py-[8px] text-[--font-s-buttons] h-auto rounded">
                             Crear cuenta
                         </Button>
 
