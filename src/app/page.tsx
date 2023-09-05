@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
 
       <div className='h-[200px]'>
-
+        {/* <Prueba /> */}
       </div>
 
       <main className=" h-[1000px]">

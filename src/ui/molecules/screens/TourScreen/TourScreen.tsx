@@ -34,7 +34,6 @@ export const TourScreen = () => {
 
     const nextSlide = () => {
         setStep(step === slideData.length - 1 ? 0 : step + 1);
-        animation();
 
         if (step === slideData.length - 1) {
             finishTour();
@@ -45,27 +44,16 @@ export const TourScreen = () => {
         setStep(step === 0 ? slideData.length - 1 : step - 1);
     }
 
-    const animation = () => {
-        const loader = anime.timeline({
-            complete: () => {
-
-            }
-        })
-
-        /*         loader.add({
-                    targets: '.tour-slide',
-                    translateX: [0, '-100%'],
-                    easing: 'easeInOutQuad',
-                }) */
-    }
 
     return (
-        <div className={`container-tour grid ${tourViewed ? 'hidden' : ''} fixed z-[50] w-full h-screen bg-slate-50`}>
-            <div className="h-full">
-                <ul className='h-full overflow-hidden flex'>
+        <div className={`container-tour grid ${tourViewed ? 'hidden' : ''} overflow-hidden fixed z-[50] w-full h-screen bg-slate-50`}>
+            <div className="h-full flex flex-col">
+                <ul style={{
+                    transform: `translateX(-${step * 100}%)`
+                }} className='h-full animation-tour grid'>
                     {
                         slideData.map((slide, index) => (
-                            <li key={slide.id} className={`${step === index ? 'active grid' : 'hidden'} ${step === index && step > 0 ? 'tour-slide' : ''}`}>
+                            <li key={slide.id} className={`grid ${step === index ? 'active' : ''}`}>
                                 <div className='grid relative'>
                                     <div className="w-full h-full">
                                         <Image className="object-cover h-full" priority={true} src={slide.img} alt={`Beauty img tour ${index}`} />
