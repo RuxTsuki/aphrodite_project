@@ -46,7 +46,7 @@ export const TourScreen = () => {
 
 
     return (
-        <div className={`container-tour grid ${tourViewed ? 'hidden' : ''} overflow-hidden fixed z-[50] w-full h-screen bg-slate-50`}>
+        <div className={`container-tour grid ${tourViewed ? 'hidden' : ''} overflow-hidden fixed z-[80] w-full h-screen bg-slate-50`}>
             <div className="h-full flex flex-col">
                 <ul style={{
                     transform: `translateX(-${step * 100}%)`
