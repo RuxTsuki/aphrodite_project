@@ -14,11 +14,11 @@ type Props = {
  * useEffects to apply theme changes and avoid useEffects in Principal Components
  */
 export const useApplyTheme = ({ initialTheme = Themes.dark, theme = Themes.dark, setTheme }: Props) => {
-    const themePrefer = useListenPrefersChange();
+    /* const themePrefer = useListenPrefersChange(); */
 
     useEffect(() => setTheme(initialTheme), [initialTheme, setTheme]);
 
-    useEffect(() => setTheme(themePrefer), [setTheme, themePrefer]);
+    /* useEffect(() => setTheme(themePrefer), [setTheme, themePrefer]); */
 
     useEffect(() => {
         const newTheme = theme === Themes.dark ? Themes.dark : Themes.light;
