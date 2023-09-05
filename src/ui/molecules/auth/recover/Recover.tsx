@@ -9,7 +9,7 @@ export const Recover = () => {
         <>
             <GoBackMenu customRoute="/auth" />
 
-            <div className="container max-w-[700px] px-[50px] mt-[50px] mx-auto">
+            <div className="container max-w-[700px] px-[50px] mt-[60px] mx-auto">
                 <h3 className='title'>Restablecer Contraseña</h3>
 
                 <div className="mt-[50px]">

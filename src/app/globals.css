@@ -37,6 +37,7 @@
   --font-s-title: 1.5rem;
   --font-s-subtitle: 1rem;
   --font-s-text: .8125rem;
+  --font-s-text-small: .75rem;
   --font-s-footer: 1rem;
   --font-s-buttons: .8125rem;
   --font-s-input: .75rem;
@@ -133,6 +134,12 @@ body {
 
 .normal-text {
   font-size: clamp(var(--font-s-text), 1.7vw, var(--font-s-text-d));
+  font-weight: var(--font-w-text);
+  color: var(--color-paragraph);
+}
+
+.small-text {
+  font-size: clamp(var(--font-s-text-small), 1.7vw, var(--font-s-text-d));
   font-weight: var(--font-w-text);
   color: var(--color-paragraph);
 }

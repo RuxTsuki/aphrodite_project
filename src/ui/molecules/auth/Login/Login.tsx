@@ -10,7 +10,7 @@ export const Login = () => {
         <>
             <GoBackMenu customRoute="/" />
 
-            <div className="container max-w-[700px] px-[50px] mt-[50px] mx-auto">
+            <div className="container max-w-[700px] px-[50px] mt-[60px] mx-auto">
                 <h3 className='title'>Iniciar Sesión</h3>
 
                 <div className="mt-[50px]">
@@ -18,7 +18,7 @@ export const Login = () => {
                         <Input size={'sm'} type="email" placeholder="Enter your email" />
                         <Input size={'sm'} type="password" placeholder="Enter your Password" />
 
-                        <p className="normal-text mt-[5px]"> ¿Olvidaste tu
+                        <p className="small-text mt-[5px]"> ¿Olvidaste tu
                             <Link href={'/auth/recover'}>
                                 <span className='text-main underline pl-1'>
                                     Contraseña?
@@ -30,7 +30,7 @@ export const Login = () => {
                             Iniciar Sesion
                         </Button>
 
-                        <p className="normal-text mt-[10px]">¿No tienes cuenta?
+                        <p className="small-text mt-[10px]">¿No tienes cuenta?
                             <Link href={'/auth/register'}>
                                 <span className='text-main underline pl-1'>Registrate</span>
                             </Link>
