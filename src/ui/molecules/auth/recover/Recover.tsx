@@ -7,7 +7,7 @@ import { GoBackMenu } from "@/ui/molecules/GoBackMenu";
 export const Recover = () => {
     return (
         <>
-            <GoBackMenu customRoute="/auth" />
+            <GoBackMenu customRoute="/join" />
 
             <div className="container max-w-[700px] px-[50px] mt-[60px] mx-auto">
                 <h3 className='title'>Restablecer Contraseña</h3>

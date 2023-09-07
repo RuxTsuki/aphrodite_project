@@ -17,11 +17,11 @@ export const Header = () => {
                     <AphroditeLogo />
                 </div>
 
-                <Link href="auth" shallow>
-                    <Button color="primary" className="px-[20px] py-[8px] text-[12px] h-auto w-auto rounded">
+                <Button color="primary" className="px-[20px] py-[8px] text-[12px] h-auto w-auto rounded">
+                    <Link href="join">
                         Iniciar Sesion
-                    </Button>
-                </Link>
+                    </Link>
+                </Button>
             </nav>
         </div>
     )
