@@ -3,10 +3,17 @@
 import { useState } from 'react';
 import './side_menu.css';
 import { Button } from '@nextui-org/react';
+import { useAppDispatch, useAppSelector } from '@/hooks/state/useStateTypes';
+import { toggleShrink } from '@/store/reducers/sideBarMenu/sideBarMenu.slice';
 
 export const SideMenu = () => {
+    const { isOpen, isShrink } = useAppSelector(state => state.sideBarMenu);
+    const dispatch = useAppDispatch();
 
-    const [isSmallSideM, setIsSmallSideM] = useState(true);
+    const toggleSmallView = () => {
+        dispatch(toggleShrink(!isShrink));
+    }
+
     const sideMenus = [{
         title: 'Usuarios',
         menus: [{
@@ -19,12 +26,11 @@ export const SideMenu = () => {
         }]
     }]
 
-
     return (
         <>
-            <div className={`${isSmallSideM ? 'small-side-menu ' : ''}side-bar-container fixed left-[-250px] flex flex-col justify-between overflow-hidden w-[250px] h-full py-[1.25rem] px-[1rem] bg-[--bg-color-side-menu]`}>
+            <div className={`${isOpen ? 'side-bar-open ' : ''}${isShrink ? 'small-side-menu ' : ''}side-bar-container fixed z-[22] left-[-250px] top-0 md:flex flex-col justify-between overflow-hidden w-[250px] h-full py-[1.25rem] px-[1rem] bg-[--bg-color-side-menu]`}>
                 <div className='side-bar-top w-full h-[45px] flex items-center'>
-                    <Button onClick={() => setIsSmallSideM(!isSmallSideM)} color="primary" className="px-[20px] py-[8px] text-[12px] h-auto w-auto rounded">
+                    <Button onClick={() => toggleSmallView()} color="primary" className="px-[20px] py-[8px] text-[12px] h-auto w-auto rounded">
                         Open
                     </Button>
                 </div>

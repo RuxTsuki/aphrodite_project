@@ -22,7 +22,9 @@
   --primary-color: #c98bef;
 
   --bg-color: #fff;
-  --bg-color-side-menu: #fff;
+  --bg-color-side-menu: var(--bg-color);
+
+  --height-menu: 64px;
 
   /* font sizes Desktop*/
   --font-s-big-title-d: 5.125rem;

@@ -6,6 +6,11 @@
     width: 80px;
 }
 
+.side-bar-open {
+    display: flex;
+    left: 0;
+}
+
 /* Menu Navegacion */
 
 /* Responsive */
