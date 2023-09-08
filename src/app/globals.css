@@ -11,8 +11,8 @@
   --color-title: #000;
   --color-subtitle: #000;
   --color-paragraph: #565656;
-
   --color-item-menu: #7A7A7A;
+  --color-text-side-menu: var(--color-paragraph);
 
   --color-btn: #000;
   --bg-color-btn-filled: #000;
@@ -22,6 +22,7 @@
   --primary-color: #c98bef;
 
   --bg-color: #fff;
+  --bg-color-side-menu: #fff;
 
   /* font sizes Desktop*/
   --font-s-big-title-d: 5.125rem;
