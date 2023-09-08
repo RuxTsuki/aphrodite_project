@@ -2,6 +2,7 @@
 
 import { useAppSelector } from "@/hooks/state/useStateTypes"
 import { Button } from "@nextui-org/react"
+import Link from "next/link"
 
 export const Prueba = () => {
 
@@ -9,9 +10,9 @@ export const Prueba = () => {
 
     return (
         <div>
-            {
-                value
-            }
+            <Link href="/login">
+                to Test
+            </Link>
         </div>
     )
 }

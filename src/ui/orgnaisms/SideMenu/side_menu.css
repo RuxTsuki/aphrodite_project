@@ -1,0 +1,29 @@
+.side-bar-container {
+    transition: width .4s ease, left .4s ease;
+    border-right: 1px solid var(--border-color-side-menu);
+    left: var(--side-bar-menu-left-negative);
+}
+
+@media screen and (max-width: 767px) {
+    .small-side-menu {
+        width: 80px;
+    }
+}
+
+.side-bar-open {
+    display: flex;
+    left: 0;
+}
+
+.side-bar-arrows-view {
+    transition: left .4s ease;
+}
+
+/* Menu Navegacion */
+
+/* Responsive */
+@media (max-height: 660px) {
+    .side-bar-top, .side-bar-bottom {
+        margin-bottom: 4px;
+    }
+}
