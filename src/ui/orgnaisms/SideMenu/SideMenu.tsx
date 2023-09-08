@@ -145,7 +145,7 @@ export const SideMenu = () => {
             <div
                 onClick={() => toggleMenuFromOutside()}
                 className={`${isOpen && !isShrink ? 'block ' : 'hidden '}
-            absolute bg-darkness-screen top-0 bottom-0 left-0 z-[22] right-0 h-full w-full`}></div>
+            fixed bg-darkness-screen top-0 bottom-0 left-0 z-[22] right-0 h-full w-full`}></div>
         </>
     )
 }
