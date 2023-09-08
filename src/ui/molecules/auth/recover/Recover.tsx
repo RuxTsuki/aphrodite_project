@@ -2,12 +2,13 @@
 
 import { Button, Input } from "@nextui-org/react";
 import { GoBackMenu } from "@/ui/molecules/GoBackMenu";
+import { LoginRoute } from "@/utils/constant";
 
 
 export const Recover = () => {
     return (
         <>
-            <GoBackMenu customRoute="/join" />
+            <GoBackMenu customRoute={LoginRoute} />
 
             <div className="container max-w-[700px] px-[50px] mt-[60px] mx-auto">
                 <h3 className='title'>Restablecer Contraseña</h3>

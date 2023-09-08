@@ -3,18 +3,19 @@
 import { Button, Input } from "@nextui-org/react"
 import { useRouter } from "next/navigation"
 import { GoBackMenu } from "@/ui/molecules/GoBackMenu";
+import { LoginRoute } from "@/utils/constant";
 
 export const Register = () => {
 
     const router = useRouter();
 
     const goBack = () => {
-        router.replace('/join');
+        router.replace(LoginRoute);
     }
 
     return (
         <>
-            <GoBackMenu customRoute="/join" />
+            <GoBackMenu customRoute={LoginRoute} />
 
             <div className="container max-w-[700px] px-[50px] mt-[60px] mx-auto">
                 <h3 className='title'>Crear cuenta</h3>
@@ -36,7 +37,7 @@ export const Register = () => {
                         </p>
 
                         <p className="small-text mt-[10px]"> ¿Ya tienes cuenta?
-                            <span onClick={() => goBack()} className='text-main underline pl-1 cursor-pointer'>Inicia Sesion</span>
+                            <span onClick={() => goBack()} className='text-main underline pl-1 cursor-pointer'>Inicia Sesión</span>
                         </p>
 
                     </form>
