@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react';
 import './side_menu.css';
 import { Button } from '@nextui-org/react';
 import { useAppDispatch, useAppSelector } from '@/hooks/state/useStateTypes';
