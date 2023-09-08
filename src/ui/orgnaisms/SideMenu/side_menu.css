@@ -27,3 +27,17 @@
         margin-bottom: 4px;
     }
 }
+
+
+.sidebar-item-menu:hover {
+    background-color: var(--bg-color-side-menu-hover);
+    border-radius: 6px;
+
+    & .item-menu-text {
+        color: var(--color-subtitle);
+    }
+
+    & .sidebar-menu-icons-color path {
+        fill: var(--color-icons);
+    }
+}

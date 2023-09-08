@@ -2,17 +2,26 @@
 
 import { useAppDispatch, useAppSelector } from "@/hooks/state/useStateTypes"
 import { toggleMenu } from "@/store/reducers/sideBarMenu/sideBarMenu.slice"
-import { AphroditeLogo, Menu } from "@/ui/atoms"
-import { Button } from "@nextui-org/react"
-import Link from "next/link"
+import { Account, AphroditeLogo, Menu } from "@/ui/atoms"
+import { LoginRoute, RegisterRoute } from "@/utils/constant";
+import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@nextui-org/react";
+import { useRouter } from "next/navigation";
+import { Key } from "react";
 
 export const Header = () => {
 
     const { isShrink } = useAppSelector(state => state.sideBarMenu)
+    const router = useRouter();
     const dispatch = useAppDispatch();
 
     const toggleSideBarMenu = () => {
         dispatch(toggleMenu(true))
+    }
+
+    const handelActionMenu = (key: Key) => {
+        key === 'login'
+            ? router.push(LoginRoute)
+            : router.push(RegisterRoute);
     }
 
     return (
@@ -29,11 +38,22 @@ export const Header = () => {
                     </span>
                 </div>
 
-                <Button color="primary" className="px-[20px] py-[8px] text-[12px] h-auto w-auto rounded">
-                    <Link href="join">
-                        Iniciar Sesion
-                    </Link>
-                </Button>
+                <Dropdown>
+                    <DropdownTrigger>
+                        <Button isIconOnly variant="light" className="rounded">
+                            <Account className="general-icon-color" />
+                        </Button>
+                    </DropdownTrigger>
+
+                    <DropdownMenu
+                        aria-label="Action event example"
+                        onAction={handelActionMenu}
+                    >
+                        <DropdownItem key="login">Iniciar Sesión</DropdownItem>
+                        <DropdownItem key="register">Registrarse </DropdownItem>
+                    </DropdownMenu>
+                </Dropdown>
+
             </nav>
         </div>
     )
