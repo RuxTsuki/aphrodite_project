@@ -29,6 +29,8 @@
 
   --height-menu: 64px;
 
+  --padding-outside: 12px;
+
   /* font sizes Desktop*/
   --font-s-big-title-d: 5.125rem;
   --font-s-text-d: 1.25rem;
@@ -155,7 +157,7 @@ body {
   stroke: var(--color-icons-side-menu);
 }
 
-/* Styles for text titles, sub, paragraph */
+/* Text, Titles, Sub, Paragraph */
 
 .title {
   font-size: clamp(var(--font-s-title), 1.7vw, var(--font-s-title-d));

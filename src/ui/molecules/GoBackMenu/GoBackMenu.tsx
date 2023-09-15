@@ -19,8 +19,8 @@ export const GoBackMenu = ({ customRoute = '' }: { customRoute?: string }) => {
     }
 
     return (
-        <nav className="px-[18px] py-[14px] flex items-center gap-[10px]">
-            <Button onClick={() => goTo()} size="sm" variant="light">
+        <nav className="px-[--padding-outside] py-[14px] flex items-center gap-[10px]">
+            <Button isIconOnly onClick={() => goTo()} size="sm" variant="light">
                 <LeftArrow className="general-icon-color" />
             </Button>
 

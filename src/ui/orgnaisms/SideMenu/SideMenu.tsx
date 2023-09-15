@@ -32,17 +32,21 @@ export const SideMenu = () => {
         icon: Person,
         id: 'users',
         menus: [{
-            title: 'Peluqueria',
+            title: 'Peluquerias',
             id: 'hairSalon',
             icon: SelfCare
         }, {
-            title: 'Barberia',
+            title: 'Reservas',
             id: 'barberSalon',
             icon: Cut
         }, {
-            title: 'Spa',
-            id: 'spaSalon',
+            title: 'Historial',
+            id: 'history',
             icon: Leaf
+        }, {
+            title: 'Perfil',
+            id: 'profile',
+            icon: Person
         }]
     }, {
         title: 'Negocios',
@@ -71,7 +75,7 @@ export const SideMenu = () => {
 
     return (
         <>
-            <div className={`${isOpen ? 'side-bar-open ' : ''}${isShrink ? 'small-side-menu ' : ''}side-bar-container fixed z-[25] top-0  flex-col justify-between overflow-hidden w-[--side-bar-menu-left] h-full py-[1.25rem] px-[1rem] bg-[--bg-color-side-menu]`}>
+            <div className={`${isOpen ? 'side-bar-open ' : ''}${isShrink ? 'small-side-menu ' : ''}side-bar-container fixed z-[25] top-0  flex-col justify-between overflow-hidden w-[--side-bar-menu-left] h-full py-[1.25rem] px-[--padding-outside] bg-[--bg-color-side-menu]`}>
                 {/* <div className={`left-[231px] ${isShrink ? 'left-[60px]' : ''} ${isOpen ? 'block ' : 'hidden '}side-bar-arrows-view md:hidden fixed rounded-full p-[6px] bg-[--bg-color]`}>
                     <LeftArrowThick onClick={() => toggleSmallView(true)} className={`${isShrink ? 'hidden ' : 'block '}general-icon-color`} />
                     <RightArrowThick onClick={() => toggleSmallView(false)} className={`${isShrink ? 'block ' : 'hidden '}general-icon-color`} />
@@ -94,7 +98,7 @@ export const SideMenu = () => {
                                         {
                                             sectionMenu.menus.map((menu) =>
                                                 <li key={menu.id} tabIndex={1} className='sidebar-item-menu px-[8px] py-[5px]'>
-                                                    <Link href={`/${menu.id}`} className='flex gap-3 items-center'>
+                                                    <Link href={`/`} className='flex gap-3 items-center'>
                                                         <>
                                                             <menu.icon className='general-icon-color sidebar-menu-icons-color' />
                                                             <p className='item-menu-text'>{menu.title}</p>
