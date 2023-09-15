@@ -71,7 +71,7 @@ export const SideMenu = () => {
 
     return (
         <>
-            <div className={`${isOpen ? 'side-bar-open ' : ''}${isShrink ? 'small-side-menu ' : ''}side-bar-container fixed z-[25] top-0  flex-col justify-between overflow-hidden w-[--side-bar-menu-left] h-full py-[1.25rem] px-[1rem] bg-[--bg-color-side-menu]`}>
+            <div className={`${isOpen ? 'side-bar-open ' : ''}${isShrink ? 'small-side-menu ' : ''}side-bar-container fixed z-[25] top-0  flex-col justify-between overflow-hidden w-[--side-bar-menu-left] h-full py-[1.25rem] px-[--padding-outside] bg-[--bg-color-side-menu]`}>
                 {/* <div className={`left-[231px] ${isShrink ? 'left-[60px]' : ''} ${isOpen ? 'block ' : 'hidden '}side-bar-arrows-view md:hidden fixed rounded-full p-[6px] bg-[--bg-color]`}>
                     <LeftArrowThick onClick={() => toggleSmallView(true)} className={`${isShrink ? 'hidden ' : 'block '}general-icon-color`} />
                     <RightArrowThick onClick={() => toggleSmallView(false)} className={`${isShrink ? 'block ' : 'hidden '}general-icon-color`} />

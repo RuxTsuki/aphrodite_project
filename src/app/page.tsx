@@ -1,5 +1,5 @@
 
-import { SplashScreen, TourScreen } from '@/ui/molecules';
+import { HeroSection, SearchSection, SplashScreen, TourScreen } from '@/ui/molecules';
 import { Header, SideMenu } from '@/ui/orgnaisms';
 
 export default function Home() {
@@ -13,12 +13,10 @@ export default function Home() {
 
       <SideMenu />
 
-      <div className='main-content'>
+      <div className='main-content h-[1000px]'>
         <Header />
-        <main className="h-[1000px]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. A in tempore perspiciatis odio hic ducimus quibusdam voluptatum cu
-          piditate, pariatur doloremque minima dolores quod aspernatur, aut, harum repudiandae soluta at ab!
-        </main>
+        <HeroSection />
+        <SearchSection />
       </div>
     </>
 
