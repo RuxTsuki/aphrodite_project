@@ -13,10 +13,10 @@ export const SearchSection = () => {
     }
 
     return (
-        <section className="grid p-[--padding-outside] gap-2">
+        <section className="grid px-[--padding-outside] py-[1.5rem] gap-2">
 
             <div className="text-center pt-[10px]">
-                <h3 className="subtitle">Empecemos eligiendo un servicio</h3>
+                <h3 className="title">Empecemos eligiendo un servicio</h3>
             </div>
 
             <div className="flex items-center gap-2 pt-[10px]">

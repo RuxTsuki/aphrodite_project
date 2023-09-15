@@ -1,5 +1,5 @@
 
-import { HeroSection, SearchSection, SplashScreen, TourScreen } from '@/ui/molecules';
+import { HeroSection, OurSelections, SearchSection, SplashScreen, TourScreen } from '@/ui/molecules';
 import { Header, SideMenu } from '@/ui/orgnaisms';
 
 export default function Home() {
@@ -17,6 +17,8 @@ export default function Home() {
         <Header />
         <HeroSection />
         <SearchSection />
+        <hr className="shrink-0 bg-divider border-none w-full h-divider" role="separator" />
+        <OurSelections />
       </div>
     </>
 
