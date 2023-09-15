@@ -17,7 +17,7 @@ export const Register = () => {
         <>
             <GoBackMenu customRoute={LoginRoute} />
 
-            <div className="container max-w-[700px] px-[50px] mt-[60px] mx-auto">
+            <div className="container max-w-[700px] px-[40px] mt-[60px] mx-auto">
                 <h3 className='title'>Crear cuenta</h3>
 
                 <div className="mt-[50px]">

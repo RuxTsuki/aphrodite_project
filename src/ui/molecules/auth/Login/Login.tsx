@@ -11,7 +11,7 @@ export const Login = () => {
         <>
             <GoBackMenu customRoute="/" />
 
-            <div className="container max-w-[700px] px-[50px] mt-[60px] mx-auto">
+            <div className="container max-w-[700px] px-[40px] mt-[60px] mx-auto">
                 <h3 className='title'>Iniciar Sesión</h3>
 
                 <div className="mt-[50px]">
