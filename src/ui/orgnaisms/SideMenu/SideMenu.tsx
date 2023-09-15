@@ -32,17 +32,21 @@ export const SideMenu = () => {
         icon: Person,
         id: 'users',
         menus: [{
-            title: 'Peluqueria',
+            title: 'Peluquerias',
             id: 'hairSalon',
             icon: SelfCare
         }, {
-            title: 'Barberia',
+            title: 'Reservas',
             id: 'barberSalon',
             icon: Cut
         }, {
-            title: 'Spa',
-            id: 'spaSalon',
+            title: 'Historial',
+            id: 'history',
             icon: Leaf
+        }, {
+            title: 'Perfil',
+            id: 'profile',
+            icon: Person
         }]
     }, {
         title: 'Negocios',
@@ -94,7 +98,7 @@ export const SideMenu = () => {
                                         {
                                             sectionMenu.menus.map((menu) =>
                                                 <li key={menu.id} tabIndex={1} className='sidebar-item-menu px-[8px] py-[5px]'>
-                                                    <Link href={`/${menu.id}`} className='flex gap-3 items-center'>
+                                                    <Link href={`/`} className='flex gap-3 items-center'>
                                                         <>
                                                             <menu.icon className='general-icon-color sidebar-menu-icons-color' />
                                                             <p className='item-menu-text'>{menu.title}</p>
