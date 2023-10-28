@@ -29,7 +29,7 @@ export const Header = () => {
         <div className="relative h-[--height-menu]">
             <nav className='fixed top-0 left-0 right-0 z-[20] px-[--padding-outside] py-[14px] flex items-center justify-between bg-[--bg-color]'>
                 <div className={`flex gap-[10px] items-center justify-center`}>
-                    <Button isIconOnly onClick={() => toggleSideBarMenu()} size="sm" variant="light">
+                    <Button isIconOnly onClick={() => toggleSideBarMenu()} size="sm" variant="flat">
                         <Menu className="general-icon-color" />
                     </Button>
 
