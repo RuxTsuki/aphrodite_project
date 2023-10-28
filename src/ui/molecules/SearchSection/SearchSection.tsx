@@ -1,7 +1,6 @@
 'use client'
 
 import { Services } from "./Services";
-import { SelectionSection } from "./SelectionSection";
 
 
 export const SearchSection = () => {
@@ -12,8 +11,6 @@ export const SearchSection = () => {
             <div className="text-center pt-[10px]">
                 <h3 className="title">¿Qué estás buscando?</h3>
             </div>
-
-            <SelectionSection />
 
             <Services />
         </section>
