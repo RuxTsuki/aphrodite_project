@@ -5,7 +5,8 @@ import { toggleMenu } from "@/store/reducers/sideBarMenu/sideBarMenu.slice"
 import { Account, AphroditeLogo, Menu } from "@/ui/atoms"
 import { LoginRoute, RegisterRoute } from "@/utils/constant";
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@nextui-org/react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
+
 import { Key } from "react";
 
 export const Header = () => {
