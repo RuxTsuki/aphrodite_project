@@ -8,8 +8,8 @@
   --background-end-rgb: 255, 255, 255;
 
 
-  --color-title: #000;
-  --color-subtitle: #000;
+  --color-title: #9A7758;
+  --color-subtitle: #9A7758;
   --color-paragraph: #565656;
   --color-item-menu: #7A7A7A;
   --color-text-side-menu: var(--color-paragraph);
@@ -19,8 +19,8 @@
   --bg-color-btn-filled: #000;
   --bg-color-btn-outlined: #000;
 
-  --color-icons: #000;
-  --primary-color: #c98bef;
+  --color-icons: #9A7758;
+  --primary-color: #9A7758;
 
   --bg-color: #fff;
   --bg-color-side-menu: var(--bg-color);
