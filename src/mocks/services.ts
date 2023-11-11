@@ -1,7 +1,14 @@
+import { recommendBeautySalon } from '@/models/types/beautySalon/services.type';
+
 import ImageMan from '@/assets/imgs/services/corteHombre.jpg';
 import ImageChildren from '@/assets/imgs/services/corteChildrens.jpg';
 import ImageWoman from '@/assets/imgs/services/corteMujer.jpg';
 
+import ImageSalon01 from '@/assets/imgs/beautysalon/beautySalon0.jpg';
+import ImageSalon02 from '@/assets/imgs/beautysalon/beautySalon1.jpg';
+import ImageSalon03 from '@/assets/imgs/beautysalon/beautySalon2.jpg';
+import ImageSalon04 from '@/assets/imgs/beautysalon/beautySalon4.jpg';
+import ImageSalon05 from '@/assets/imgs/beautysalon/beautySalon5.jpg';
 
 
 export const servicesForUsers = [{
@@ -114,5 +121,72 @@ export const moreSearched = [
         title: "Corte Niños",
         status: "active",
         image: ImageChildren
+    }
+]
+
+export const recommendedMock: recommendBeautySalon[] = [
+    {
+        id: `beautySalon1`,
+        address: 'Calle 23# 12-1 Normanida',
+        city: 'Medellin',
+        title: 'Salon de Belleza Suba',
+        rating: 45,
+        image: ImageSalon01,
+        schedule: {
+            status: 'active',
+            time: '10:00 - 20:00'
+        },
+        status: 'unactive'
+    },
+    {
+        id: `beautySalon2`,
+        address: 'Calle 23# 12-1 Normanida',
+        city: 'Bogota',
+        title: 'Salon de Belleza Bogota',
+        rating: 45,
+        image: ImageSalon02,
+        schedule: {
+            status: 'active',
+            time: '10:00 - 20:00'
+        },
+        status: 'active'
+    },
+    {
+        id: `beautySalon3`,
+        address: 'Calle 23# 12-1 teusaquillo',
+        city: 'Bogota',
+        title: 'Salon de Belleza Teusaquillo',
+        rating: 45,
+        image: ImageSalon03,
+        schedule: {
+            status: 'active',
+            time: '10:00 - 20:00'
+        },
+        status: 'active'
+    }, {
+        id: `beautySalon4`,
+        address: 'Calle 23# 12-1 Normanida',
+        city: 'Medellin',
+        title: 'Salon de Belleza Suba',
+        rating: 45,
+        image: ImageSalon04,
+        schedule: {
+            status: 'active',
+            time: '10:00 - 20:00'
+        },
+        status: 'active'
+    },
+    {
+        id: `beautySalon5`,
+        address: 'Calle 23# 12-1 Normanida',
+        city: 'Bogota',
+        title: 'Salon de Belleza Bogota',
+        rating: 45,
+        image: ImageSalon05,
+        schedule: {
+            status: 'active',
+            time: '10:00 - 20:00'
+        },
+        status: 'unactive'
     }
 ]

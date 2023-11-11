@@ -192,8 +192,8 @@ body {
 }
 
 .subtitle-alt {
-  font-size: clamp(var(--font-s-subtitle), 1.7vw, var(--font-s-subtitle-d));
-  font-weight: var(--font-w-subtitle-alt);
+  font-size: clamp(15px, 1.7vw, var(--font-s-subtitle-d));
+  font-weight: var(--font-w-subtitle);
   color: var(--color-subtitle);
 }
 
@@ -226,6 +226,12 @@ body {
 
 .word-break {
   word-break: break-word;
+}
+
+.text-wrap-custom {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-wrap: nowrap;
 }
 
 /* splash */
