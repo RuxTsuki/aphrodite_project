@@ -12,6 +12,8 @@
   --color-subtitle: #9A7758;
   --color-paragraph: #565656;
   --color-item-menu: #7A7A7A;
+  --color-small-links: #3FB0AD;
+  --color-small-text: #8B8D8D;
   --color-text-side-menu: var(--color-paragraph);
   --color-icons-side-menu: #a1a1aa;
   --color-btn: #000;
@@ -53,8 +55,9 @@
   /* fonts weight */
   --font-w-big-title: 800;
   --font-w-text: 400;
-  --font-w-title: 500;
-  --font-w-subtitle: 400;
+  --font-w-title: 600;
+  --font-w-subtitle: 500;
+  --font-w-subtitle-alt: 400;
   --font-w-footer: 500;
 
   --icon-size-common: 1.75rem;
@@ -62,6 +65,11 @@
 
   --side-bar-menu-left: 250px;
   --side-bar-menu-left-negative: -250px;
+
+  /* cards */
+  --width-card-portrait: 106px;
+  --height-card-portrait: 178px;
+
 }
 
 @media screen and (min-width: 768px) {
@@ -81,9 +89,22 @@ body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(253, 253, 253, 0);
+}
 
 .light {
-  --color-title: #000;
+ /*  --color-title: #000;
   --color-subtitle: #000;
   --color-paragraph: #565656;
 
@@ -91,15 +112,15 @@ body {
 
   --color-btn: #000;
   --bg-color-btn-filled: #000;
-  --bg-color-btn-outlined: #000;
+  --bg-color-btn-outlined: #000; 
 
   --color-icons: #1f1d1d;
-  --bg-color: #fff;
+  --bg-color: #fff;*/
   --svg-theme: url(../assets/svg/theme/sun.svg);
 }
 
 .dark {
-  --color-title: #fff;
+/*   --color-title: #fff;
   --color-subtitle: #fff;
   --color-paragraph: #fff;
 
@@ -107,15 +128,14 @@ body {
   --color-btn: #111010;
 
   --color-icons: #fff;
-  --color-icons-side-menu: #71717a;
+  --color-icons-side-menu: #71717a; 
 
-  /* bg */
   --bg-color: #161515;
   --bg-color-btn-filled: #fff;
   --bg-color-btn-outlined: #fff;
   --border-color-side-menu: #2f2f2f;
   --bg-color-side-menu-hover: #323232db;
-
+*/
   --svg-theme: url(../assets/svg/theme/moon.svg);
 }
 
@@ -171,16 +191,28 @@ body {
   color: var(--color-subtitle);
 }
 
+.subtitle-alt {
+  font-size: clamp(var(--font-s-subtitle), 1.7vw, var(--font-s-subtitle-d));
+  font-weight: var(--font-w-subtitle-alt);
+  color: var(--color-subtitle);
+}
+
 .normal-text {
   font-size: clamp(var(--font-s-text), 1.7vw, var(--font-s-text-d));
   font-weight: var(--font-w-text);
   color: var(--color-paragraph);
 }
 
+.small-link {
+  font-size: clamp(var(--font-s-text-small), 1.7vw, var(--font-s-text-d));
+  font-weight: var(--font-w-text);
+  color: var(--color-small-links);
+}
+
 .small-text {
   font-size: clamp(var(--font-s-text-small), 1.7vw, var(--font-s-text-d));
   font-weight: var(--font-w-text);
-  color: var(--color-paragraph);
+  color: var(--color-small-text);
 }
 
 .paragraph {
@@ -192,6 +224,9 @@ body {
   font-size: clamp(1rem, 1.8vw, var(--font-s-text-d));
 }
 
+.word-break {
+  word-break: break-word;
+}
 
 /* splash */
 .aphrodite-logo.splash {
@@ -229,4 +264,51 @@ body {
     margin-left: 80px;
   }
 
+}
+
+.square-custom-1 {
+  height: calc(100vh - 285px);
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  background-color: #F6F8F5;
+  padding: 15px 20px;
+}
+
+/* mini recuadro */
+
+.square-custom-1 > div {
+  height: 100%;
+  overflow: scroll;
+}
+
+.square-custom-1 > div::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .square-custom-1 > div::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+
+main {
+  height: 1000px;
+}
+
+/* searched */
+
+.container-searched-list {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.searched-list {
+  display: flex;
+  gap: 8px;
+}
+
+.searched-list .show-more-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--width-card-portrait), var(--width-card-portrait)));
 }

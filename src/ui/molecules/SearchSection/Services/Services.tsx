@@ -38,7 +38,7 @@ export const Services = () => {
             <Select
                 selectedKeys={allServices}
                 onChange={handleSelectionChange}
-                variant="bordered"
+                variant="flat"
                 isMultiline={true}
                 size="lg"
                 aria-label="multiple select of services"
@@ -48,6 +48,7 @@ export const Services = () => {
                     base: "max-w-xs",
                     trigger: "min-h-unit-12 py-2",
                 }}
+                className="min-w-[292px]"
                 renderValue={(items) => {
                     console.log(items)
                     return (

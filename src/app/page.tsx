@@ -1,7 +1,7 @@
 
 import { SplashScreen, TourScreen } from '@/ui/molecules';
 import { HeroSection } from '@/ui/molecules/HeroSection';
-import { Header, SideMenu } from '@/ui/orgnaisms';
+import { Header, MainContent, SideMenu } from '@/ui/orgnaisms';
 
 export default function Home() {
 
@@ -14,9 +14,10 @@ export default function Home() {
 
       <SideMenu />
 
-      <div className='main-content h-[1000px]'>
+      <div className='main-content bg-[#F8EFEF]'>
         <Header />
         <HeroSection />
+        <MainContent />
 
 
         {/* 

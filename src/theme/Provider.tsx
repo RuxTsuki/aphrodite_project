@@ -9,15 +9,15 @@ import { changeThemeA } from "@/store/reducers/theme/themeSlice";
 import { NextUIProvider } from '@nextui-org/react'
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-    const initialTheme = useGetInitialTheme();
+    /* const initialTheme = useGetInitialTheme();
     const userTheme = useAppSelector(state => state.theme.value);
-    const dispatch = useAppDispatch();
+    const dispatch = useAppDispatch(); */
 
-    const changeThemeFirstTime = useCallback((theme: Themes) => {
+    /* const changeThemeFirstTime = useCallback((theme: Themes) => {
         dispatch(changeThemeA(theme));
     }, [dispatch]);
-
-    useApplyTheme({ initialTheme, theme: userTheme, setTheme: changeThemeFirstTime });
+ */
+    /* useApplyTheme({ initialTheme, theme: userTheme, setTheme: changeThemeFirstTime }); */
     // const themeMui = useMemo(() => createTheme(getDesignTokens(theme)), [theme]);
 
     return (

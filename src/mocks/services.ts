@@ -1,3 +1,9 @@
+import ImageMan from '@/assets/imgs/services/corteHombre.jpg';
+import ImageChildren from '@/assets/imgs/services/corteChildrens.jpg';
+import ImageWoman from '@/assets/imgs/services/corteMujer.jpg';
+
+
+
 export const servicesForUsers = [{
     id: 1,
     name: "Corte Hombre",
@@ -72,3 +78,41 @@ export const servicesForUsers = [{
     status: "vacation",
     color: "#F5F5F5"
 }]
+
+export const moreSearched = [
+    {
+        id: `1CorteH`,
+        title: "Corte Hombre",
+        status: "active",
+        image: ImageMan
+    },
+    {
+        id: `2CorteM`,
+        title: "Corte Mujer",
+        status: "active",
+        image: ImageWoman
+    },
+    {
+        id: `3CorteC`,
+        title: "Corte Niños",
+        status: "active",
+        image: ImageChildren
+    }, {
+        id: `1CorteH2`,
+        title: "Corte Hombre",
+        status: "active",
+        image: ImageMan
+    },
+    {
+        id: `2CorteM3`,
+        title: "Corte Mujer",
+        status: "active",
+        image: ImageWoman
+    },
+    {
+        id: `3CorteC4`,
+        title: "Corte Niños",
+        status: "active",
+        image: ImageChildren
+    }
+]

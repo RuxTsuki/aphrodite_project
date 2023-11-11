@@ -29,16 +29,18 @@ export const Header = () => {
     return (
         /* el height de este div toca cambiarlo */
         <div className="relative h-[--height-menu]">
-            <nav className='fixed top-0 left-0 right-0 z-[20] px-[--padding-outside] py-[14px] flex items-center justify-between bg-[--bg-color]'>
+            <nav className='fixed top-0 left-0 right-0 z-[20] px-[--padding-outside] py-[14px] flex items-center justify-between bg-transparent'>
                 <div className={`flex gap-[10px] items-center justify-center`}>
-                    <Button isIconOnly onClick={() => toggleSideBarMenu()} size="sm" variant="flat">
+                    <Button className="bg-transparent" isIconOnly onClick={() => toggleSideBarMenu()} size="sm" variant="flat">
                         <Menu className="general-icon-color" />
                     </Button>
 
-                    <span className={`${isShrink ? 'ml-[28px]' : ''}`}>
-                        <AphroditeLogo />
-                    </span>
+
                 </div>
+
+                <span className={`${isShrink ? 'ml-[28px]' : ''}`}>
+                    <AphroditeLogo />
+                </span>
 
                 <Dropdown>
                     <DropdownTrigger>
