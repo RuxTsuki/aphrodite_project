@@ -5,7 +5,9 @@ import { toggleMenu } from "@/store/reducers/sideBarMenu/sideBarMenu.slice"
 import { Account, AphroditeLogo, Menu } from "@/ui/atoms"
 import { LoginRoute, RegisterRoute } from "@/utils/constant";
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@nextui-org/react";
+// next/navigation es el nuevo
 import { useRouter } from "next/navigation";
+
 import { Key } from "react";
 
 export const Header = () => {
@@ -27,16 +29,18 @@ export const Header = () => {
     return (
         /* el height de este div toca cambiarlo */
         <div className="relative h-[--height-menu]">
-            <nav className='fixed top-0 left-0 right-0 z-[20] px-[--padding-outside] py-[14px] flex items-center justify-between bg-[--bg-color]'>
+            <nav className='fixed top-0 left-0 right-0 z-[20] px-[--padding-outside] py-[14px] flex items-center justify-between bg-transparent'>
                 <div className={`flex gap-[10px] items-center justify-center`}>
-                    <Button isIconOnly onClick={() => toggleSideBarMenu()} size="sm" variant="light">
+                    <Button className="bg-transparent" isIconOnly onClick={() => toggleSideBarMenu()} size="sm" variant="flat">
                         <Menu className="general-icon-color" />
                     </Button>
 
-                    <span className={`${isShrink ? 'ml-[28px]' : ''}`}>
-                        <AphroditeLogo />
-                    </span>
+
                 </div>
+
+                <span className={`${isShrink ? 'ml-[28px]' : ''}`}>
+                    <AphroditeLogo />
+                </span>
 
                 <Dropdown>
                     <DropdownTrigger>
