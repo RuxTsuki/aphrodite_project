@@ -1,5 +1,5 @@
 import { MostSearched } from "@/ui/molecules/MostSearched"
-import { Recomended } from "@/ui/molecules/Recomended"
+import { Recommended } from "@/ui/molecules/Recomended"
 
 
 export const MainContent = () => {
@@ -10,7 +10,7 @@ export const MainContent = () => {
                 <main>
 
                     <MostSearched />
-                    <Recomended />
+                    <Recommended />
 
                 </main>
 
