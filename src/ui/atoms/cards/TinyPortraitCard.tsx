@@ -9,7 +9,7 @@ export const TinyPortraitCard = ({ id, title, image, status }: mostSearchedServi
         <>
             <div key={id} className="rounded-[10px] w-[--width-card-portrait] h-[--height-card-portrait] sm">
                 <div className="w-[--width-card-portrait] h-[--height-card-portrait] relative">
-                    <Image src={image.src} fill objectFit='cover' className="rounded-[9px]" priority alt={`Image ${title}`} />
+                    <Image src={image.src} fill className="rounded-[9px] object-cover" priority alt={`Image ${title}`} />
 
                     <div className='bg-[#00000060] absolute w-[--width-card-portrait] h-[--height-card-portrait] rounded-[9px]'></div>
 

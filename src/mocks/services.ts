@@ -136,7 +136,8 @@ export const recommendedMock: recommendBeautySalon[] = [
             status: 'active',
             time: '10:00 - 20:00'
         },
-        status: 'unactive'
+        status: 'unactive',
+        onClick: () => { }
     },
     {
         id: `beautySalon2`,
@@ -149,7 +150,8 @@ export const recommendedMock: recommendBeautySalon[] = [
             status: 'active',
             time: '10:00 - 20:00'
         },
-        status: 'active'
+        status: 'active',
+        onClick: () => { }
     },
     {
         id: `beautySalon3`,
@@ -162,7 +164,8 @@ export const recommendedMock: recommendBeautySalon[] = [
             status: 'active',
             time: '10:00 - 20:00'
         },
-        status: 'active'
+        status: 'active',
+        onClick: () => { }
     }, {
         id: `beautySalon4`,
         address: 'Calle 23# 12-1 Normanida',
@@ -174,7 +177,8 @@ export const recommendedMock: recommendBeautySalon[] = [
             status: 'active',
             time: '10:00 - 20:00'
         },
-        status: 'active'
+        status: 'active',
+        onClick: () => { }
     },
     {
         id: `beautySalon5`,
@@ -187,6 +191,7 @@ export const recommendedMock: recommendBeautySalon[] = [
             status: 'active',
             time: '10:00 - 20:00'
         },
-        status: 'unactive'
+        status: 'unactive',
+        onClick: () => { }
     }
 ]

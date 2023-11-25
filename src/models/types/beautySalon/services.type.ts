@@ -18,5 +18,6 @@ export interface recommendBeautySalon {
         status: string,
         time: string
     },
-    rating: number
+    rating: number,
+    onClick: () => void
 }
