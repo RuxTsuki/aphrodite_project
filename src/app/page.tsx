@@ -14,7 +14,7 @@ export default function Home() {
 
       <SideMenu />
 
-      <div className='main-content bg-[#F8EFEF]'>
+      <div className='main-content bg-[#F6F8F5]'>
         <Header />
         <HeroSection />
         <MainContent />

@@ -309,6 +309,10 @@ main {
   overflow-y: hidden;
 }
 
+.container-searched-list::-webkit-scrollbar {
+  display: none;
+}
+
 .searched-list {
   display: flex;
   gap: 8px;
