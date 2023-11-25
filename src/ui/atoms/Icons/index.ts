@@ -1,6 +1,8 @@
 export * from './Account';
+export * from './Address';
 export * from './AphroditeLogo';
 export * from './Calendar';
+export * from './Chat';
 export * from './Close';
 export * from './Cut';
 export * from './DisplaySettings';
@@ -17,3 +19,4 @@ export * from './Search';
 export * from './SelfCare';
 export * from './Store';
 export * from './StoreFront';
+export * from './Watch';
